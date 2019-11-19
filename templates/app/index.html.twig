@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AppController!{% endblock %}
+
+{% block body %}
+    <h1>{{ events | length }} Events</h1>
+    {% for event in events %}
+        <p>{{ event.name }} / {{ event.location }} / {{ event.price }}</p>
+    {% else %}
+        Pas d'events
+    {% endfor %}
+{% endblock %}
